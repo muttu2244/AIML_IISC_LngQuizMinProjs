@@ -5,12 +5,13 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  
 jobs:
   build:
-    runs-on: mylaptop
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkoutcode
+      - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Set up Python
