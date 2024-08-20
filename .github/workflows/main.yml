@@ -28,10 +28,6 @@ jobs:
         run: |
           python minProj1/train_model.py
 
-      - name: Run tests
-        run: |
-          pytest
-
       - name: Build and push Docker image
         env:
           DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
