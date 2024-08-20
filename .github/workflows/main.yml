@@ -26,7 +26,7 @@ jobs:
 
       - name: Run model training script
         run: |
-          python train_model.py
+          python minProj1/train_model.py
 
       - name: Run tests
         run: |
