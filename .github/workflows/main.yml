@@ -27,3 +27,15 @@ jobs:
       - name: Run model training script
         run: |
           python minProj1/train_model.py
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build and push Docker image
+        env:
+          DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
+          DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+        run: |
+            echo $DOCKER_HUB_ACCESS_TOKEN | docker login -u $DOCKER_HUB_USERNAME --password-stdin
+            docker build -t $DOCKER_HUB_USERNAME/minProj1 .
+            docker push $DOCKER_HUB_USERNAME/minProj1
+  
