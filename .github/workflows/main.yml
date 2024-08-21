@@ -40,11 +40,7 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: '3.11'
-    - name: Install dependencies
-      run: pip install --upgrade build
-    - name: Build package
-      run: python -m build
-    - name: Run model training script
+    - name: Run model prediction script
       run: |
         python minProj1/app.py
   push:
