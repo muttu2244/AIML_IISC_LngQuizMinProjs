@@ -56,9 +56,7 @@ jobs:
     - name: List files
       run: 
         ls -la minProj1/
-    - name: Run model prediction script
-      run: |
-        python minProj1/app.py
+    
   push:
     needs: [build]
     runs-on: ubuntu-latest
