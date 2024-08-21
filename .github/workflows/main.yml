@@ -27,6 +27,12 @@ jobs:
       - name: Run model training script
         run: |
           python minProj1/train_model.py
+      - name: Add iris_model.pkl
+        run: git add iris_model.pkl
+      - name: Commit changes
+        run: git commit -m "Add iris_model.pkl"
+      - name: Push changes
+        run: git push origin 
       
 
   build:
