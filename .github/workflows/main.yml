@@ -27,12 +27,11 @@ jobs:
       - name: Run model training script
         run: |
           python minProj1/train_model.py
-      - name: Add iris_model.pkl
-        run: git add iris_model.pkl
-      - name: Commit changes
-        run: git commit -m "Add iris_model.pkl"
-      - name: Push changes
-        run: git push origin 
+      - uses: actions/upload-artifact@v2
+        with:
+          name: my-trained-pipeline
+          path: minProj1/*.pkl
+          retention-days: 1 
       
 
   build:
@@ -46,6 +45,10 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: '3.11'
+    - uses: actions/download-artifact@v2
+      with:
+        name: my-trained-pipeline
+        path: minProj1
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
