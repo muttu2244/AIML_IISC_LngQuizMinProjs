@@ -4,7 +4,7 @@ import joblib
 app = Flask(__name__)
 
 # Load the model
-model = joblib.load('..\minProj1\iris_model.pkl')
+model = joblib.load('../minProj1/iris_model.pkl')
 
 @app.route('/')
 def home():

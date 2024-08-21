@@ -53,6 +53,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r minProj1/requirements.txt
+    - name: List files
+      run: 
+        ls -la minProj1/
     - name: Run model prediction script
       run: |
         python minProj1/app.py
