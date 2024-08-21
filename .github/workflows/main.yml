@@ -31,6 +31,14 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
+    - name: Repo checkout 
+      uses: actions/checkout@v2
+
+    - uses: actions/download-artifact@v2
+      with: 
+        name: my-build-package
+        path: minProj1
+        
     - name: Build and push Docker image
       env:
         DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
