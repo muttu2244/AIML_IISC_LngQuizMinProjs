@@ -5,12 +5,12 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY app.py /app/
-COPY iris_model.pkl /app/
+COPY minProj1/app.py /app/
+COPY minProj1/iris_model.pkl /app/
 
 # Install any needed packages specified in requirements.txt
-COPY requirements.txt /app/
-RUN pip install -r requirements.txt
+COPY minProj1/requirements.txt /app/
+RUN pip install -r minProj1/requirements.txt
 
 # Make port 5000 available to the world outside this container
 EXPOSE 5000
