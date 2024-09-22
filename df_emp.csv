@@ -1,0 +1,36 @@
+Columns,Treatment,Orginal Dtype,Range,Size of the bin,Conversion
+age,Binning,Numerical,18-60,5,Hot_Encoding
+attrition,NA,Cat,,,Hot_Encoding
+businesstravel,NA,Cat,,,Hot_Encoding
+dailyrate,Capping,Numerical,(102-1499),,Standardization
+department,NA,Cat,,,Hot_Encoding
+distancefromhome,NA,Numerical,(1-29),,Standardization
+education,NA,Cat,,,Hot_Encoding
+educationfield,NA,Cat,,,Hot_Encoding
+employeecount,Drop,Numerical,,,
+employeenumber,Drop,Numerical,,,
+environmentsatisfaction,NA,Cat,,,Hot_Encoding
+gender,NA,Cat,,,Hot_Encoding
+hourlyrate,NA,Numerical,(30-100),,Standardization
+jobinvolvement,NA,Numerical,(1-4),,
+joblevel,NA,Numerical,(1-5),,
+jobrole,NA,Cat,,,Hot_Encoding
+jobsatisfaction,NA,Numerical,(1-4),,
+maritalstatus,NA,Cat,,,Hot_Encoding
+monthlyincome,Binning & Capping,Numerical,Continous Variable,,Standardization
+monthlyrate,Capping,Numerical,Continous Variable,,Standardization
+numcompaniesworked,NA,Numerical,(1-9),,
+over18,Drop,Cat,,,
+overtime,NA,Cat,,,Hot_Encoding
+percentsalaryhike,Capping,Numerical,(11-25),,Standardization
+performancerating,NA,Numerical,(3-4),,
+relationshipsatisfaction,NA,Numerical,(1-4),,
+standardhours,Drop,Numerical,,,
+stockoptionlevel,NA,Numerical,(0-3),,
+totalworkingyears,Capping,Numerical,(0-40),,Standardization
+trainingtimeslastyear,Capping,Numerical,(0-6),,Standardization
+worklifebalance,,Numerical,(1-4),,
+yearsatcompany,Capping,Numerical,(0-40),,Standardization
+yearsincurrentrole,Capping,Numerical,(0-18),,Standardization
+yearssincelastpromotion,Capping,Numerical,(0-15),,Standardization
+yearswithcurrmanager,Capping,Numerical,(0-17),,Standardization
